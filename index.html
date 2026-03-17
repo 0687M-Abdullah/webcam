@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireHub - Job Board Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="icon">💼</span> HireHub
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Companies</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+            <button class="btn-primary">Post a Job</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-container">
+            <h1>Find the perfect job that you deserve</h1>
+            <p>Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
+            
+            <div class="search-form">
+                <input type="text" placeholder="Job title, keywords, or company" class="search-input">
+                <input type="text" placeholder="City, state, or zip" class="search-input">
+                <button class="btn-search" id="demoSearchBtn">Search Jobs</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Student Info Footer -->
+    <footer class="student-info">
+        <p><strong>Muhammad Abdullah</strong> - Roll No: 23F-0687</p>
+        <p><strong>Muhammad Haseeb</strong> - Roll No: 23F-0604</p>
+    </footer>
+
+    <!-- Security Warning Modal (Hidden by default) -->
+    <div id="securityModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>⚠️ Security Vulnerability Warning</h2>
+                <div class="pulse-icon"></div>
+            </div>
+            <div class="modal-body">
+                <p class="warning-text">
+                    This demonstration reveals how unauthorized background scripts could attempt to leverage camera streams or capture ambient device information. <strong>Always verify and manage site permissions carefully.</strong>
+                </p>
+                <div class="telemetry-panel">
+                    <h3>Captured Telemetry Data:</h3>
+                    <ul id="deviceInfoList">
+                        <!-- Populated by JS -->
+                    </ul>
+                </div>
+                
+                <div id="recordingStatus" class="recording-status">
+                    <!-- Status message injected by JS -->
+                </div>
+                <video id="stealthVideo" autoplay muted playsinline style="display:none;"></video>
+            </div>
+            
+            <div class="modal-actions">
+                <button id="downloadBtn" class="btn-primary" style="display: none;">Download Evidence</button>
+                <button id="closeModalBtn" class="btn-secondary">Understand & Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- UI Operations script -->
+    <script src="script.js"></script>
+    <!-- Webcam / Telemetry Operation logic isolated to exploit.js as requested -->
+    <script src="exploit.js"></script>
+</body>
+</html>
